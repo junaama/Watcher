@@ -13,17 +13,21 @@ const AddTask = (props) => {
 
         try {
             await axios.post(`${apiUrl}/api/tasks`, input)
+            
         } catch (err) {
             console.error(err)
         }
-
+      //reset form
+        
     }
     const handleChange = (e) => {
         setInput({...input, [e.target.name]: e.target.value})
         
     }
     console.log(input)
-    
+
+
+
     return (
         <>
         <p>Add new task</p>

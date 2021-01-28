@@ -1,6 +1,7 @@
 import React , {useState} from 'react';
+import { format } from 'date-fns'
 import {enGB} from 'date-fns/locale'
-import {DatePicker} from "react-nice-dates"
+import {DatePicker, DatePickerCalendar} from "react-nice-dates"
 import 'react-nice-dates/build/style.css'
 import AddTask from './AddTask';
 
@@ -11,11 +12,11 @@ console.log(date)
         return (
             <>
             
-            <DatePicker date={date} onDateChange={setDate} locale={enGB}>
-                {({ inputProps, focused})=> (
-                    <input className={'input' + (focused ? ' -focused' : '')} {...inputProps}/>
-                )}
-            </DatePicker>
+          
+            <p>
+        Selected date: {date ? format(date, 'dd MMM yyyy', { locale: enGB }) : 'none'}.
+      </p>
+      <DatePickerCalendar date={date} onDateChange={setDate} locale={enGB} />
             <AddTask date={date}/>
             </>
         )

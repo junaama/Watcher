@@ -4,7 +4,7 @@ import apiUrl from "../../apiConfig";
 
 const Schedule = () => {
     const [info, setInfo] = useState([]);
-
+    const [showIframe, setShowIframe] = useState(false);
 
     useEffect( ()=> {
        const makeApiCall = async () => {
@@ -19,17 +19,32 @@ const Schedule = () => {
        }
        makeApiCall()
     },[])
-    console.log(info)
+
+
+    const setIframe = (link, content)=> {
+        console.log("in here")
+        if(link.slice(12,19) === "youtube"){
+            const id = link.slice(32, 43);
+            const newLink = `https://youtube.com/embed/${id}`
+            return (
+                <iframe width="800" height="600" src={newLink}  allowFullScreen title={content} frameBorder="0" allow="autoplay; encrypted-media"></iframe>
+            )
+        } else {
+            return (
+                <iframe width="800" height="600" src={link} title={content}></iframe>
+            )
+        }
+    }
+    
     const tasksArray = info.map((item)=> (
-        
         <>
-        
             <p>{item.date.slice(0,10)}</p>
             <p>{item.content}</p>
            <p>{item.link}</p> 
-           <p>{item.link.slice(12,19) == "youtube" ? "yes" : "no" }</p>
+           <button onClick={()=> setShowIframe(true)}>SHOW</button>
+           <button onClick={()=> setShowIframe(false)}>HIDE</button>
+           {showIframe ? setIframe(item.link, item.content) : "Hidden"}
            
-           <iframe width="600" height="800" src={item.link}></iframe>
         </>
     ))
     

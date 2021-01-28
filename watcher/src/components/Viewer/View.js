@@ -1,11 +1,14 @@
 import React from 'react';
-import Schedule from './Schedule.js'
+import Schedule from './Schedule.js';
+import Note from './Note.js'
+
 const View = ()=> {
 
     return (
         <>
-        IN View
+        IN VIEW
         <Schedule/>
+        <Note/>
         </>
     )
 }

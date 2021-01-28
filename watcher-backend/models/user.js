@@ -14,6 +14,12 @@ const userSchema = new mongoose.Schema({
       type: mongoose.Schema.Types.ObjectId
     }
   ],
+  archive: [
+    {
+      ref: "Archive",
+      type: mongoose.Schema.Types.ObjectId
+    }
+  ]
  
 });
 

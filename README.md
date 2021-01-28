@@ -11,10 +11,17 @@
 - Added routing in client
 - User is able to add a task to the database
 
+### January 25-28, 2021
+- Added iframes to display input links
+
+
 ## To do
 
 - setup testing env with jest
 - Deploy to mongodb + Deploy to netlify/heroku...etc
 - Embed links to display on viewport
-- Incorporate UI/Design (Preferably Material UI)
+- Incorporate UI/Design
+    - material ui / sass / styled-components
+- bundle with webpack
+- or use react lazy -> https://blog.bitsrc.io/lazy-loading-react-components-with-react-lazy-and-suspense-f05c4cfde10c
 

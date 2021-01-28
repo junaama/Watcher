@@ -4,7 +4,14 @@ const taskSchema = new mongoose.Schema(
     {
         "date": Date,
         "content": String,
-        "link": String
+        "link": String,
+        "notes": [
+            {
+              ref: "archive",
+              type: mongoose.Schema.Types.ObjectId
+            }
+          ],
+        
         
     }
 );

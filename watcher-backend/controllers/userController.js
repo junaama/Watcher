@@ -4,6 +4,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const User = require("../models/user");
 const auth = require("../middleware/auth");
+const Task = require("../models/task")
 require("dotenv").config();
 
 //register
@@ -127,6 +128,10 @@ router.post("/tokenIsValid", async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+
+//put task to schedule
+//delete task from schedule
+//update task in schedule
 
 
 module.exports = router;

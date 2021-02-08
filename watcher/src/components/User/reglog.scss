@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap');
+$fontstack: 'Sen', sans-serif;
+$maincolor: #C2A787;
+$compcolor: #A3CDFF;
+
+.register-ctn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 35px;
+    font: $fontstack;
+  }
+  
+  .form-ctn {
+    display: flex;
+    flex-direction: column;
+    input {
+        padding: 8px;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid #a0a0a0;
+    }
+  }
+  
+  #register-head {
+    font-size: 25px;
+    font-weight: 700;
+  }
+  #reg-btn,
+  #reg-log {
+    font-family: $fontstack;
+    text-align: center;
+  }
+  #reg-btn {
+    font-size: 25px;
+    border: none;
+    text-align: center;
+  }
+  a {
+    color: #989dff;
+  }
+
+  .login-ctn{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 35px;
+}
+.logform-ctn {
+    display: flex;
+    flex-direction: column;
+    input {
+        padding: 8px;
+  border-radius: 5px;
+  border: none;
+  border: 1px solid #a0a0a0;
+    }
+}
+
+#login-head {
+    font-size: 25px;
+    font-weight: 700;
+}
+#log-reg, #log-btn {
+    font-family: "Sen";
+  text-align: center;
+}
+
+#log-btn {
+    font-size: 25px;
+    border: none;
+    text-align: center;
+}

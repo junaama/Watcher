@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap');
+$fontstack: 'Sen', sans-serif;
+$maincolor: #C2A787;
+$compcolor: #A3CDFF;
+
+.home-ctn {
+    padding-top: 10%;
+    margin: 0;
+}
+
+.calendar-ctn {
+     font: $fontstack;
+    display: grid;
+   grid-template-columns: 1fr 1fr;
+    
+}

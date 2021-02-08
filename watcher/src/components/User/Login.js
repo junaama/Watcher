@@ -4,7 +4,7 @@ import axios from 'axios'
 import Errors from '../Errors/errors'
 import UserContext from '../../Context/context'
 import apiUrl from '../../apiConfig.js'
-
+import './reglog.scss'
 const Login = () => {
   const [input, setInput] = useState({
     email: "",

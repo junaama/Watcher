@@ -1,0 +1,21 @@
+$maincolor: #c2a787;
+$compcolor: #a3cdff;
+
+nav {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+
+  background-color: $compcolor;
+  width: 100%;
+  a {
+    list-style: none;
+    text-align: center;
+    text-decoration: none;
+    margin: 0;
+    padding: 10px;
+    display: inline-block;
+    background-color: $compcolor;
+    align-items: center;
+  }
+}

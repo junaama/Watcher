@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap");
+$fontstack: "Sen", sans-serif;
+$maincolor: #c2a787;
+$compcolor: #a3cdff;
+
+.addtask-ctn {
+  display: block;
+  background-color: $maincolor;
+  text-align: center;
+  margin: 0;
+  
+  form {
+    display: flex;
+    text-align: center;
+    button {
+      text-decoration: none;
+      border: none;
+      border-color: $maincolor;
+      background-color: $maincolor;
+      font-size: 26px;
+      transition-duration: 0.4s;
+    }
+    button:hover {
+      background-color: $compcolor;
+      color: white;
+    }
+    label {
+      display: inline-block;
+    }
+  }
+}
